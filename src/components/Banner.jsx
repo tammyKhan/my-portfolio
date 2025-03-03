@@ -28,7 +28,7 @@ const Banner = () => {
       <motion.h3 animate={{ x: [0, 30, 0] }}
         transition={{duration:6, repeat:Infinity}}
        className="text-gray-600 tracking-widest font-bold  dark:text-gray-400">welcome to presentation of</motion.h3>
-     <h1 className="text-4xl font-bold text-red-700">Farhana Islam Khan</h1>
+     <h1 className="text-4xl font-bold text-red-400">Farhana Islam Khan</h1>
 
      {/* Typewriter effect */}
      <h2 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mt-2">
@@ -40,7 +40,7 @@ const Banner = () => {
       </p>
       
       <a href="https://github.com/tammyKhan" >
-      <button className="btn btn-outline mt-5 border-2 border-red-600 text-red-600 font-bold"><FaGithub></FaGithub> View on GitHub</button>
+      <button className="btn btn-outline mt-5 border-2 border-red-400 text-red-400 font-bold"><FaGithub></FaGithub> View on GitHub</button>
       </a>
       
      </div>

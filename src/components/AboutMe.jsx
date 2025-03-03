@@ -12,7 +12,7 @@ const AboutMe = () => {
       viewport={{ once: false, amount: 0.2 }} // Animation triggers when 20% is visible
     >
       <div className="text-center">
-        <h2 className="text-4xl font-bold text-red-600 mb-4">About Me</h2>
+        <h2 className="text-4xl font-bold text-red-400 mb-4">About Me</h2>
         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
           I'm a passionate **Frontend Developer** with a keen eye for detail and a strong commitment to crafting intuitive and engaging user experiences. Currently, I'm expanding my expertise in **Backend Development** to evolve into a **Full Stack Developer**.
         </p>
@@ -39,17 +39,17 @@ const AboutMe = () => {
           transition={{ duration: 1, delay: 0.3 }}
           viewport={{ once: false, amount: 0.3 }}
         >
-          <h3 className="text-2xl font-semibold text-red-500">Who am I?</h3>
+          <h3 className="text-2xl font-semibold text-red-400">Who am I?</h3>
           <p className="mt-4 text-lg">
             I started my journey in **web development** out of curiosity and quickly fell in love with coding. My goal is to build **scalable, efficient, and visually appealing applications** that solve real-world problems.
           </p>
 
-          <h3 className="text-2xl font-semibold text-red-500 mt-6">What I'm Learning?</h3>
+          <h3 className="text-2xl font-semibold text-red-400 mt-6">What I'm Learning?</h3>
           <p className="mt-4 text-lg">
             Currently, I'm exploring **Node.js, Express.js, and databases (MongoDB, PostgreSQL)** to deepen my backend skills and transition into full-stack development.
           </p>
 
-          <h3 className="text-2xl font-semibold text-red-500 mt-6">Let's Connect!</h3>
+          <h3 className="text-2xl font-semibold text-red-400 mt-6">Let's Connect!</h3>
           <p className="mt-4 text-lg">
             I'm always open to **collaborations, freelance projects, and learning opportunities**. Let's create something amazing together! 🚀
           </p>
