@@ -36,12 +36,10 @@ const Banner = () => {
           </h2>
 
       <p className="text-base font-medium text-gray-500 dark:text-gray-400 mt-2">
-      "Hello world 👋 I'm a dedicated Frontend Developer with a strong passion for creating engaging user experiences. Currently, I'm diving into Backend Development to enhance my skills and transition into a Full Stack Developer."
+      "  Passionate about crafting seamless user experiences and building scalable web applications. Currently exploring backend development to become a versatile full-stack developer."
       </p>
-      <p className="text-sm font-semibold text-gray-500 dark:text-gray-400 mt-2">
-      Passionate about building scalable web applications and learning backend technologies like Node.js, Express, and databases..
-      </p>
-      <a href="https://github.com/tammyKhan">
+      
+      <a href="https://github.com/tammyKhan" >
       <button className="btn btn-outline mt-5 border-2 border-red-600 text-red-600 font-bold"><FaGithub></FaGithub> View on GitHub</button>
       </a>
       
