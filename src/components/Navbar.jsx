@@ -101,7 +101,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end flex items-center space-x-3">
         {/* Dark Mode Toggle */}
-        <button onClick={toggleDarkMode} className="p-2 cursor-pointer rounded-full bg-gray-200 dark:bg-gray-700 text-red-600 dark:text-yellow-300">
+        <button onClick={toggleDarkMode} className="p-2 cursor-pointer rounded-full bg-gray-200 dark:bg-gray-700 text-black dark:text-yellow-300">
           {darkMode ? <BiSun size={18} /> : <FaMoon size={18} />}
         </button>
 
