@@ -10,7 +10,7 @@ const technicalSkills = [
   { name: 'React', icon: <FaReact size={40} className="text-[#61DAFB]" />, progress: 90 },
   { name: 'Tailwind CSS', icon: <SiTailwindcss size={40} className="text-[#38BDF8]" />, progress: 85 },
   { name: 'DaisyUI', icon: <SiDaisyui size={40} className="text-[#DA77F2]" />, progress: 80 },
-  { name: 'Node.js', icon: <FaNodeJs size={40} className="text-[#68A063]" />, progress: 60 },
+  { name: 'Node.js', icon: <FaNodeJs size={40} className="text-[#68A063]" />, progress: 50 },
   { name: 'Databases (MongoDB, PostgreSQL)', icon: <FaDatabase size={40} className="text-[#6CC24A]" />, progress: 50 },
 ];
 
