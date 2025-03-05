@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { BiSun } from 'react-icons/bi';
 import { FaDownload,  FaMoon } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
@@ -30,6 +30,7 @@ const Navbar = () => {
     }
   }, [darkMode]);
 
+  
   const links = (
     <>
       <li>
@@ -53,7 +54,7 @@ const Navbar = () => {
         </NavLink>
       </li>
       <li>
-        <NavLink
+        <NavLink     
           to="/projects"
           className={({ isActive }) =>
             isActive ? 'text-red-700 font-bold' : 'text-red-400 font-bold hover:text-red-700'

@@ -42,12 +42,13 @@ const Contact = () => {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
       className="max-w-4xl mx-auto p-8 bg-gray-100 shadow-lg rounded-lg "
     >
       <h2 className="text-3xl font-bold text-center mb-5 text-red-400">
         Wanna get in touch?
       </h2>
-      <div className="flex flex-col md:flex-row gap-8">
+      <div className="flex flex-col md:flex-row gap-8 dark:text-gray-700">
         {/* Left Section - Contact Info */}
         <div className="md:w-1/2 space-y-6">
           <div className="flex items-center gap-4">
