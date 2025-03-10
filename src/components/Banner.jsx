@@ -20,7 +20,7 @@ const Banner = () => {
       <img
         src={myself}
         alt="Farhana Islam Khan"
-        className="w-96 h-96  rounded-full object-cover mb-4 border-4 border-red-600 "
+        className="w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover mb-4 border-4 border-red-600 "
       />
      <div className='text-start lg:mr-20 m-4'
         

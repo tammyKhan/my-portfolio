@@ -3,16 +3,15 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    name: "Dream11 Cricket Team Builder",
+    name: "Food Sharing App",
     description:
-      "Dream11 Cricket Team Builder is a web application designed to help cricket fans assemble their ultimate Dream11 T20 cricket team. With a user-friendly interface, users can browse available players, filter them by criteria, and select their desired squad, all within a sleek, responsive layout.",
-    technologies: ["React", "Tailwind CSS", "DaisyUI"],
+      "This project is a Food Sharing Website designed to reduce food waste by allowing users to share surplus food with their community. Users can add food items, request available food, manage their food listings, and more. The platform ensures secure authentication and user-friendly interactions using modern web technologies.",
+    technologies: ["React", "Tailwind CSS", "Firebase"],
     liveLink: "https://food-sharing-2841d.web.app/",
-    clientLink:
-      "https://github.com/programming-hero-web-course1/b10a7-dream-11-tammyKhan",
-    thumbnail: "https://i.ibb.co.com/qY3TxzJS/image.png",
+    clientLink: "https://github.com/tammyKhan/B10A11-client-side",
+    serverLink: "https://github.com/tammyKhan/B10A11-server-side",
+    thumbnail: "https://i.ibb.co.com/1YrsGSMd/image.png",
   },
-
   {
     name: "Movie Portal",
     description:
@@ -26,15 +25,27 @@ const projects = [
     thumbnail: "https://i.ibb.co.com/LDMpc5XN/image.png",
   },
   {
-    name: "Food Sharing App",
+    name: "Donate Bangladesh",
     description:
-      "This project is a Food Sharing Website designed to reduce food waste by allowing users to share surplus food with their community. Users can add food items, request available food, manage their food listings, and more. The platform ensures secure authentication and user-friendly interactions using modern web technologies.",
-    technologies: ["React", "Tailwind CSS", "Firebase"],
-    liveLink: "https://food-sharing-2841d.web.app/",
-    clientLink: "https://github.com/tammyKhan/B10A11-client-side",
-    serverLink: "https://github.com/tammyKhan/B10A11-server-side",
-    thumbnail: "https://i.ibb.co.com/1YrsGSMd/image.png",
+      "Donate Bangladesh is a charity platform that enables users to contribute to various humanitarian causes, such as flood relief and medical aid for affected individuals. It ensures secure and transparent donations to help those in need.",
+    technologies: ["Html", "Tailwind CSS", "DaisyUI", "Javascript"],
+    liveLink: "https://tammykhan.github.io/Donate-Bangladesh/",
+    clientLink: "https://github.com/tammyKhan/Donate-Bangladesh",
+    thumbnail: "https://i.ibb.co.com/spTFVRg6/2025-03-05-5.png",
   },
+  {
+    name: "Dream11 Cricket Team Builder",
+    description:
+      "Dream11 Cricket Team Builder is a web application designed to help cricket fans assemble their ultimate Dream11 T20 cricket team. With a user-friendly interface, users can browse available players, filter them by criteria, and select their desired squad, all within a sleek, responsive layout.",
+    technologies: ["React", "Tailwind CSS", "DaisyUI"],
+    liveLink: "https://dream11-team.surge.sh/",
+    clientLink:
+      "https://github.com/programming-hero-web-course1/b10a7-dream-11-tammyKhan",
+    thumbnail: "https://i.ibb.co.com/qY3TxzJS/image.png",
+  },
+
+  
+  
   {
     name: "Eco Adventure Blog",
     description:
@@ -45,21 +56,13 @@ const projects = [
       "https://github.com/programming-hero-web-course1/b10-a9-authentication-tammyKhan",
     thumbnail: "https://i.ibb.co.com/N6MBwskt/eco-adventure.png",
   },
-  {
-    name: "Donate Bangladesh",
-    description:
-      "Donate Bangladesh is a charity platform that enables users to contribute to various humanitarian causes, such as flood relief and medical aid for affected individuals. It ensures secure and transparent donations to help those in need.",
-    technologies: ["Html", "Tailwind CSS", "DaisyUI", "Javascript"],
-    liveLink: "https://peddy-44.netlify.app/#adoptSection",
-    clientLink: "https://github.com/tammyKhan/Donate-Bangladesh",
-    thumbnail: "https://i.ibb.co.com/spTFVRg6/2025-03-05-5.png",
-  },
+  
   {
     name: "🐾 Pet Adoption Portal",
     description:
       "The Pet Adoption Portal is a user-friendly web application designed to help users explore and adopt pets. It offers an intuitive interface where users can browse through different categories of pets, view their details, sort them by price, and complete the adoption process. ",
     technologies: ["Html", "Tailwind CSS", "DaisyUI", "Javascript"],
-    liveLink: "https://peddy-44.netlify.app/#adoptSection",
+    liveLink: "https://peddy-44.netlify.app",
     clientLink:
       "https://github.com/programming-hero-web-course2/b10a6-pet-adoption-tammyKhan",
 

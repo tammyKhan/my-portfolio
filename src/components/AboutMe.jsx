@@ -23,12 +23,10 @@ const AboutMe = () => {
         <motion.img
           src="https://i.ibb.co.com/k2fCbmpq/photo-1603468620905-8de7d86b781e-w-600-auto-format-fit-crop-q-60-ixlib-rb-4-0.jpg"
           alt="Developer"
-          className="w-96 h-96 rounded-full shadow-lg object-cover"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.3 }}
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
+          className="w-72 h-72 md:w-96 md:h-96 rounded-full shadow-lg object-cover"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
         />
 
         {/* Right Side - Details */}
