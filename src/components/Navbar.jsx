@@ -107,7 +107,7 @@ const Navbar = () => {
         </button>
 
         {/* Resume Button */}
-        <a className="btn bg-red-400">Resume <FaDownload size={16} /></a>
+        <a href="https://drive.google.com/file/d/1rWCCMKtBz6aQ40YL1-HugqcrHPyYFO1q/view?usp=sharing" target="_blank" className="btn bg-red-400">Resume <FaDownload size={16} /></a>
       </div>
     </div>
   );
