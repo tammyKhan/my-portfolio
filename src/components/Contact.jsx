@@ -50,12 +50,12 @@ const Contact = () => {
       </h2>
       <div className="flex flex-col md:flex-row gap-8 dark:text-gray-700">
         {/* Left Section - Contact Info */}
-        <div className="md:w-1/2 space-y-6">
+        <div className="md:w-1/2 space-y-6 text-gray-600">
           <div className="flex items-center gap-4">
             <FaMapMarkerAlt className="text-2xl text-gray-700" />
             <div>
               <h4 className="font-semibold">Address</h4>
-              <p className="text-gray-600">Dhaka, Bangladesh</p>
+              <p className="">Dhaka, Bangladesh</p>
             </div>
           </div>
           <div className="flex items-center gap-4">
@@ -63,7 +63,7 @@ const Contact = () => {
             <div>
               <h4 className="font-semibold">Email</h4>
               <a
-                className="hover:underline text-gray-600"
+                className="hover:underline "
                 href="mailto:tammykhan543@gmail.com"
               >
                 tammykhan543@gmail.com
@@ -116,7 +116,7 @@ const Contact = () => {
         </div>
 
         {/* Right Section - Contact Form */}
-        <div className="md:w-1/2 bg-white p-6 rounded-lg shadow-md">
+        <div className="md:w-1/2 text-gray-600 bg-white p-6 rounded-lg shadow-md">
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
             <div>
               <label className="block text-sm font-medium">Name</label>
