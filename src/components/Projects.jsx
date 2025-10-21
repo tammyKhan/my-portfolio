@@ -17,17 +17,17 @@ const projects = [
   {
     name: "My PortFolio",
     description:
-      'Features include task creation via modal, edit/delete with localStorage sync, filters (All/Active/Completed), strike-through for completed tasks, a debounced search, task sorting (by Created, Priority, Due Date, A-Z), and "Select All" & "Clear Completed" toggles.',
-    technologies: ["Html", "TailwindCSS", "Javascript"],
-    liveLink: "https://tammykhan.github.io/Todo-App-js/",
+      'Built a fully responsive personal portfolio website with modular components including Navbar, Banner, About, Skills, Projects, and Contact. Implemented dark/light mode toggle with persistent theme using localStorage and added typewriter animation for dynamic hero section. Integrated EmailJS-powered contact form, optimized for accessibility and mobile devices, with smooth animations and refined UI.',
+    technologies: ["React", "TailwindCSS", "Javascript", "DaisyUi"],
+    liveLink: "https://heartfelt-manatee-a62a8d.netlify.app/",
     clientLink: "https://github.com/tammyKhan/my-portfolio",
     thumbnail: "https://i.ibb.co.com/JwHkzyzZ/image.png",
   },
   {
     name: "Donate Bangladesh",
     description:
-      "Donate Bangladesh is a charity platform that enables users to contribute to various humanitarian causes...",
-    technologies: ["Html", "Tailwind CSS", "DaisyUI", "Javascript"],
+      "Designed and developed a clean, responsive web app interface for a donation platform, focused on accessibility and user engagement. Implemented tab-based layout to filter and display donation categories, blogs, and user account info clearly. Resolved bugs related to blog link rendering and account balance tracking for a smoother user experience.",
+    technologies: ["Html", "Tailwind CSS", "Javascript"],
     liveLink: "https://tammykhan.github.io/Donate-Bangladesh/",
     clientLink: "https://github.com/tammyKhan/Donate-Bangladesh",
     thumbnail: "https://i.ibb.co.com/spTFVRg6/2025-03-05-5.png",
@@ -35,8 +35,8 @@ const projects = [
   {
     name: "SmartWatch Landing Page",
     description:
-      "Dream11 Cricket Team Builder is a web application designed to help cricket fans assemble their Dream11 team...",
-    technologies: ["React", "Tailwind CSS", "DaisyUI"],
+      "Developed a modern, responsive eCommerce website featuring multiple sections including Hero, Featured Collection, Gallery, Special Offers, and Customer Reviews. Implemented interactive components such as sticky header, sidebar navigation, fullscreen search overlay, shopping cart, and product carousel with dynamic counters. Enhanced user experience with GSAP animations (ScrollTrigger & SplitText), dark/light theme toggle, accordion sections, and smooth transition effects.",
+    technologies: ["HTML", "Tailwind CSS", "JavaScript", "GSAP"],
     liveLink: "https://tammykhan.github.io/smartwatch-landing/",
     clientLink:
       "https://github.com/tammyKhan/smartwatch-landing/",
