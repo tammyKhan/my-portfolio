@@ -5,11 +5,11 @@ const AboutMe = () => {
   return (
     <motion.section
       id="about"
-      className="container mx-auto my-16 px-6 lg:px-20"
+      className=""
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
-      viewport={{ once: false, amount: 0.2 }} // Animation triggers when 20% is visible
+      viewport={{ once: true, amount: 0.2 }} // Animation triggers when 20% is visible
     >
       <div className="text-center">
         <h2 className="text-4xl font-bold text-red-400 mb-4">About Me</h2>
@@ -35,7 +35,7 @@ const AboutMe = () => {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
         >
           <h3 className="text-2xl font-semibold text-red-400">Who am I?</h3>
           <p className="mt-4 text-lg">

@@ -1,89 +1,73 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { FaGithub } from "react-icons/fa";
+import { GoProjectSymlink } from "react-icons/go";
+import Modal from "./Modal";
 
 const projects = [
   {
-    name: "Food Sharing App",
+    name: "To-Do App",
     description:
-      "This project is a Food Sharing Website designed to reduce food waste by allowing users to share surplus food with their community. Users can add food items, request available food, manage their food listings, and more. The platform ensures secure authentication and user-friendly interactions using modern web technologies.",
-    technologies: ["React", "Tailwind CSS", "Firebase"],
-    liveLink: "https://food-sharing-2841d.web.app/",
-    clientLink: "https://github.com/tammyKhan/B10A11-client-side",
-    serverLink: "https://github.com/tammyKhan/B10A11-server-side",
-    thumbnail: "https://i.ibb.co.com/1YrsGSMd/image.png",
+      'Features include task creation via modal, edit/delete with localStorage sync, filters (All/Active/Completed), strike-through for completed tasks, a debounced search, task sorting (by Created, Priority, Due Date, A-Z), and "Select All" & "Clear Completed" toggles.',
+    technologies: ["Html", "TailwindCSS", "Javascript"],
+    liveLink: "https://tammykhan.github.io/Todo-App-js/",
+    clientLink: "https://github.com/tammyKhan/Todo-App-js",
+    thumbnail: "https://i.ibb.co.com/FbNc9Fgq/mobile.png",
   },
   {
-    name: "Movie Portal",
+    name: "My PortFolio",
     description:
-      "The Movie Portal is a user-friendly application designed for exploring movies, viewing movie details, adding movies, deleting movies, and managing user favorites.",
-    technologies: ["React", "DaisyUI", "Firebase", "Node.js", "MongoDB"],
-    liveLink: "https://movie-portal-c1d78.web.app/",
-    clientLink:
-      "https://github.com/programming-hero-web-course2/b10-a10-client-side-tammyKhan",
-    serverLink:
-      "https://github.com/programming-hero-web-course2/b10-a10-server-side-tammyKhan/",
-    thumbnail: "https://i.ibb.co.com/LDMpc5XN/image.png",
+      'Features include task creation via modal, edit/delete with localStorage sync, filters (All/Active/Completed), strike-through for completed tasks, a debounced search, task sorting (by Created, Priority, Due Date, A-Z), and "Select All" & "Clear Completed" toggles.',
+    technologies: ["Html", "TailwindCSS", "Javascript"],
+    liveLink: "https://tammykhan.github.io/Todo-App-js/",
+    clientLink: "https://github.com/tammyKhan/my-portfolio",
+    thumbnail: "https://i.ibb.co.com/JwHkzyzZ/image.png",
   },
   {
     name: "Donate Bangladesh",
     description:
-      "Donate Bangladesh is a charity platform that enables users to contribute to various humanitarian causes, such as flood relief and medical aid for affected individuals. It ensures secure and transparent donations to help those in need.",
+      "Donate Bangladesh is a charity platform that enables users to contribute to various humanitarian causes...",
     technologies: ["Html", "Tailwind CSS", "DaisyUI", "Javascript"],
     liveLink: "https://tammykhan.github.io/Donate-Bangladesh/",
     clientLink: "https://github.com/tammyKhan/Donate-Bangladesh",
     thumbnail: "https://i.ibb.co.com/spTFVRg6/2025-03-05-5.png",
   },
   {
-    name: "Dream11 Cricket Team Builder",
+    name: "SmartWatch Landing Page",
     description:
-      "Dream11 Cricket Team Builder is a web application designed to help cricket fans assemble their ultimate Dream11 T20 cricket team. With a user-friendly interface, users can browse available players, filter them by criteria, and select their desired squad, all within a sleek, responsive layout.",
+      "Dream11 Cricket Team Builder is a web application designed to help cricket fans assemble their Dream11 team...",
     technologies: ["React", "Tailwind CSS", "DaisyUI"],
-    liveLink: "https://dream11-team.surge.sh/",
+    liveLink: "https://tammykhan.github.io/smartwatch-landing/",
     clientLink:
-      "https://github.com/programming-hero-web-course1/b10a7-dream-11-tammyKhan",
-    thumbnail: "https://i.ibb.co.com/qY3TxzJS/image.png",
+      "https://github.com/tammyKhan/smartwatch-landing/",
+    thumbnail: "https://i.ibb.co.com/vxfHCvSC/image.png",
   },
 
-  
-  
-  {
-    name: "Eco Adventure Blog",
-    description:
-      "This is a web application designed to showcase eco-friendly travel experiences.Users can register, log in, and book their next adventure while learning about the eco-friendly features of each trip.",
-    technologies: ["React", "Tailwind CSS", "DaisyUI", "Firebase", "AOS"],
-    liveLink: "https://eco-adventure-experience-19882.web.app/",
-    clientLink:
-      "https://github.com/programming-hero-web-course1/b10-a9-authentication-tammyKhan",
-    thumbnail: "https://i.ibb.co.com/N6MBwskt/eco-adventure.png",
-  },
-  
-  {
-    name: "🐾 Pet Adoption Portal",
-    description:
-      "The Pet Adoption Portal is a user-friendly web application designed to help users explore and adopt pets. It offers an intuitive interface where users can browse through different categories of pets, view their details, sort them by price, and complete the adoption process. ",
-    technologies: ["Html", "Tailwind CSS", "DaisyUI", "Javascript"],
-    liveLink: "https://peddy-44.netlify.app",
-    clientLink:
-      "https://github.com/programming-hero-web-course2/b10a6-pet-adoption-tammyKhan",
-
-    thumbnail: "https://i.ibb.co.com/VpM67g5G/image.png",
-  },
 ];
 
 const Projects = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [clickedCardIndex, setClickedCardIndex] = useState(null);
+
+   const handleCardClick = (index) => {
+    if (window.innerWidth < 768) {
+      setClickedCardIndex(clickedCardIndex === index ? null : index);
+    }
+  }
+
   return (
     <motion.section
       id="projects"
-      className="container mx-auto my-16 px-6 lg:px-20"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
+      className="py-12 px-4"
     >
-      <div className="text-center mb-8">
+      <div className="text-center mb-10">
         <h2 className="text-4xl font-bold text-red-400 mb-4">My Projects</h2>
         <p className="text-lg text-gray-600 dark:text-gray-400">
-          These are a few of the projects I have worked on, showcasing my
-          technical skills and creative problem-solving.
+          These are a few of the projects I have worked on.
         </p>
       </div>
 
@@ -91,89 +75,81 @@ const Projects = () => {
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className="group relative border-2 border-gray-300 cursor-pointer rounded-lg shadow-lg 
-                      bg-white dark:bg-gray-800 overflow-hidden transition-all duration-300 
-                      hover:shadow-gray-500 hover:shadow-lg"
+            onClick={() => handleCardClick(index)}
+            className="group relative border-2 border-gray-300 rounded-lg shadow-lg bg-white dark:bg-gray-800 overflow-hidden transition-all duration-300 hover:shadow-red-400 hover:shadow-[0_0_20px_rgba(0,0,0,0.25)]"
             initial={{ opacity: 0.3, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: index * 0.1 }}
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
           >
-            {/* Thumbnail with Hover Zoom */}
+            {/* Thumbnail */}
             <div className="overflow-hidden rounded-t-lg">
-              <motion.img
+              <img
                 src={project.thumbnail}
                 alt={project.name}
-                className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </div>
 
-            {/* Project Details */}
-            <div className="p-4">
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
-                {project.name}
-              </h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400 mt-2">
-                {project.description}
-              </p>
-              <div className="mt-4">
-                <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">
-                  Technologies:
-                </p>
-                <ul className="list-disc list-inside">
-                  {project.technologies.map((tech, index) => (
-                    <li
-                      key={index}
-                      className="text-xs text-gray-600 dark:text-gray-400"
-                    >
-                      {tech}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+            {/* Overlay */}
+            <div className="absolute inset-0 backdrop-brightness-50 backdrop-contrast-125 opacity-0 group-hover:opacity-100 transition duration-300 z-20"></div>
 
             {/* Buttons */}
-            <div className="p-4 flex justify-between items-center">
+            <div className={`p-4 absolute inset-0 z-30 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition duration-300 
+              ${
+                clickedCardIndex === index
+                  ? "opacity-100"
+                  : "opacity-0 group-hover:opacity-100"
+              }
+              `}>
               <a
                 href={project.clientLink}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button className="btn btn-outline border-2 font-bold text-red-400 border-red-400">
-                  Client Code
+                <button
+                  title="GitHub Link"
+                  className="btn hover:bg-black hover:text-red-400 hover:font-bold hover:border-2 hover:border-red-400 font-bold text-white bg-red-400"
+                >
+                  <FaGithub className="w-6 h-6" />
                 </button>
               </a>
-              {project.serverLink ? (
-                <a
-                  href={project.serverLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <button className="btn btn-outline border-2 font-bold text-red-400 border-red-400">
-                    Server Code
-                  </button>
-                </a>
-              ) : (
-                <span className="btn btn-outline text-gray-500 text-sm italic">
-                  Not Available
-                </span>
-              )}
-            </div>
-            <div className="pb-4 flex justify-center items-center">
               <a
                 href={project.liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button className="btn hover:opacity-90 bg-red-400 text-black hover:text-white">
-                  Live Demo
+                <button
+                  title="Live Link"
+                  className="btn hover:bg-black hover:text-red-400 hover:font-bold hover:border-2 hover:border-red-400 font-bold text-white bg-red-400"
+                >
+                  <GoProjectSymlink className="w-6 h-6" />
                 </button>
               </a>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setSelectedProject(project);
+                  setIsModalOpen(true);
+                }}
+                className="px-5 py-2 bg-red-800 text-white rounded hover:bg-black hover:text-red-400 hover:font-bold hover:border-2 hover:border-red-400 transition cursor-pointer"
+              >
+                Details
+              </button>
             </div>
           </motion.div>
         ))}
       </div>
+
+      {/* Modal */}
+      <Modal
+        project={selectedProject}
+        isOpen={isModalOpen}
+        onClose={() => {
+          setIsModalOpen(false);
+          setSelectedProject(null);
+        }}
+      />
     </motion.section>
   );
 };

@@ -6,11 +6,11 @@ import Footer from '../components/Footer';
 
 const Main = () => {
   return (
-    <div className='bg-white dark:bg-black dark:text-gray-100'>
+    <div className='bg-white text-black dark:bg-black dark:text-gray-100'>
     {/* Navbar */}
       <Navbar></Navbar>
     {/* Outlet */}
-    <div className='min-h-[calc(100vh-306px)]'>
+    <div className=''>
       <Outlet />
     </div>
     {/* Footer */}

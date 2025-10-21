@@ -8,7 +8,7 @@ import {
   FaPhone,
   FaLinkedin,
   FaGithub,
-  FaTwitter,
+  
   FaFacebook,
 } from "react-icons/fa";
 import { toast, ToastContainer } from "react-toastify";
@@ -43,23 +43,23 @@ const Contact = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="max-w-4xl mx-auto p-8 bg-gray-100 shadow-lg rounded-lg "
+      className=" p-8  shadow-2xl dark:bg-gray-800 rounded-lg mb-14 "
     >
       <h2 className="text-3xl font-bold text-center mb-5 text-red-400">
         Wanna get in touch?
       </h2>
       <div className="flex flex-col md:flex-row gap-8 dark:text-gray-700">
         {/* Left Section - Contact Info */}
-        <div className="md:w-1/2 space-y-6 text-gray-600">
+        <div className="md:w-1/2 space-y-6 text-gray-600 dark:text-gray-400">
           <div className="flex items-center gap-4">
-            <FaMapMarkerAlt className="text-2xl text-gray-700" />
+            <FaMapMarkerAlt className="text-2xl text-gray-700 dark:text-gray-400" />
             <div>
               <h4 className="font-semibold">Address</h4>
               <p className="">Dhaka, Bangladesh</p>
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <FaEnvelope className="text-2xl text-gray-700" />
+            <FaEnvelope className="text-2xl text-gray-700 dark:text-gray-400" />
             <div>
               <h4 className="font-semibold">Email</h4>
               <a
@@ -71,7 +71,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <FaPhone className="text-2xl text-gray-700" />
+            <FaPhone className="text-2xl text-gray-700 dark:text-gray-400" />
             <div>
               <h4 className="font-semibold">Phone & WhatsApp</h4>
 
@@ -93,7 +93,7 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaLinkedin className="text-2xl text-blue-700 cursor-pointer hover:opacity-80" />
+                <FaLinkedin className="text-2xl text-blue-700 dark:text-gray-400 cursor-pointer hover:opacity-80" />
               </a>
 
               <a
@@ -101,7 +101,7 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaGithub className="text-2xl text-black cursor-pointer hover:opacity-80" />
+                <FaGithub className="text-2xl text-black dark:text-gray-400 cursor-pointer hover:opacity-80" />
               </a>
 
               <a
@@ -109,14 +109,14 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaFacebook className="text-2xl text-blue-700 cursor-pointer hover:opacity-80" />
+                <FaFacebook className="text-2xl text-blue-700 dark:text-gray-400 cursor-pointer hover:opacity-80" />
               </a>
             </div>
           </div>
         </div>
 
         {/* Right Section - Contact Form */}
-        <div className="md:w-1/2 text-gray-600 bg-white p-6 rounded-lg shadow-md">
+        <div className="md:w-1/2 text-gray-600 bg-white dark:bg-gray-600 dark:text-white p-6 rounded-lg shadow-md">
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
             <div>
               <label className="block text-sm font-medium">Name</label>
@@ -162,7 +162,7 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="w-full cursor-pointer bg-gray-800 text-white py-2 rounded hover:bg-gray-600 transition"
+              className="w-full cursor-pointer bg-gray-800 text-white py-2 rounded hover:bg-gray-700 transition"
             >
               SEND MESSAGE
             </button>

@@ -16,12 +16,11 @@ const Navbar = () => {
   const toggleDarkMode = () => {
     setDarkMode((prevMode) => {
       const newMode = !prevMode;
-      localStorage.setItem('darkMode', newMode); // Store preference in localStorage
+      localStorage.setItem('darkMode', newMode); 
       return newMode;
     });
   };
 
-  // Apply dark mode to the document when darkMode state changes
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add('dark');
@@ -77,7 +76,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar sticky top-0 py-2 z-50 flex w-full md:w-11/12 mx-auto shadow-md bg-transparent">
+    <div className="navbar sticky backdrop-blur-xl top-0 py-2 z-50 flex w-full md:w-11/12 mx-auto  bg-transparent">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -102,12 +101,12 @@ const Navbar = () => {
       </div>
       <div className="navbar-end flex items-center space-x-3">
         {/* Dark Mode Toggle */}
-        <button onClick={toggleDarkMode} className="p-2 cursor-pointer rounded-full bg-gray-200 dark:bg-gray-700 text-black dark:text-yellow-300">
+        <button onClick={toggleDarkMode} className="p-2 cursor-pointer rounded-full bg-gray-200 text-black hover:bg-black hover:text-gray-200 dark:bg-gray-700   dark:text-gray-200 dark:hover:bg-gray-200 dark:hover:text-gray-700">
           {darkMode ? <BiSun size={18} /> : <FaMoon size={18} />}
         </button>
 
         {/* Resume Button */}
-        <a href="https://drive.google.com/file/d/1rWCCMKtBz6aQ40YL1-HugqcrHPyYFO1q/view?usp=sharing" target="_blank" className="btn bg-red-400">Resume <FaDownload size={16} /></a>
+        <a href="/resume.pdf" download target="_blank" className="btn bg-red-400 hover:bg-black hover:border-2 hover:border-red-400 hover:text-red-400">Resume <FaDownload size={16} /></a>
       </div>
     </div>
   );

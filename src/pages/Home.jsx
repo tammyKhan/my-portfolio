@@ -8,7 +8,7 @@ import Contact from '../components/Contact';
 
 const Home = () => {
   return (
-   <div> 
+   <div className='container mx-auto space-y-14'> 
     <Banner></Banner>
     <AboutMe></AboutMe>
     <Skills></Skills>

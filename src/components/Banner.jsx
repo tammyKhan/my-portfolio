@@ -15,7 +15,7 @@ const Banner = () => {
   });
 
   return (
-    <div className='container mx-auto'>
+    <div className=' '>
       <div className="flex flex-col lg:flex-row-reverse items-center text-center  rounded-2xl ">
       <img
         src={myself}
@@ -40,7 +40,7 @@ const Banner = () => {
       </p>
       
       <a href="https://github.com/tammyKhan" >
-      <button className="btn btn-outline mt-5 border-2 border-red-400 text-red-400 font-bold"><FaGithub></FaGithub> View on GitHub</button>
+      <button className="btn btn-outline mt-5 border-2 border-red-400 text-red-400 font-bold hover:bg-red-400 hover:text-white"><FaGithub></FaGithub> View on GitHub</button>
       </a>
       
      </div>
