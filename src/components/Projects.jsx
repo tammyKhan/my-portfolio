@@ -6,13 +6,22 @@ import Modal from "./Modal";
 
 const projects = [
   {
-    name: "To-Do App",
+    name: "To-Do App - [Javascript Version]",
     description:
       'Features include task creation via modal, edit/delete with localStorage sync, filters (All/Active/Completed), strike-through for completed tasks, a debounced search, task sorting (by Created, Priority, Due Date, A-Z), and "Select All" & "Clear Completed" toggles.',
     technologies: ["Html", "TailwindCSS", "Javascript"],
     liveLink: "https://tammykhan.github.io/Todo-App-js/",
     clientLink: "https://github.com/tammyKhan/Todo-App-js",
-    thumbnail: "https://i.ibb.co.com/FbNc9Fgq/mobile.png",
+    thumbnail: "https://i.ibb.co.com/C5hDB2yj/image.png",
+  },
+  {
+    name: "To-Do App - [React Version]",
+    description:
+    'Features include a modal-based task creator, edit/delete with state-synced localStorage persistence, advanced filtering (All/In-Process/Completed), fast debounced search, multi-criteria sorting (Created, Priority, Due Date, A–Z), smooth completion toggles with real-time UI updates, reusable component architecture, and polished user feedback via SweetAlert2 alerts and React Toastify notifications.',
+    technologies: ["Html", "TailwindCSS", "React"],
+    liveLink: "https://brisktodo.netlify.app/",
+    clientLink: "https://github.com/tammyKhan/todo-app-react",
+    thumbnail: "https://i.ibb.co.com/Lfb6PbN/image.png",
   },
   {
     name: "My PortFolio",
